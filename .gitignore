@@ -1,0 +1,16 @@
+########################
+## Project
+########################
+.settings
+.buildpath
+.project
+
+########################
+## Environnement
+########################
+
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+
