@@ -7,7 +7,7 @@ include_once ('lib/ServiceCenter.class.php');
 $config = new ServiceCenter();
 
 // 路径
-$seturl = $_SERVER['HTTP_HOST'] != 'local.seeker.com' ? false : DOC_ROOT . 'config';
+$seturl =  DOC_ROOT . 'config';
 $path = isset($_GET ['url']) ? $_GET ['url'] : $seturl;
 
 // 接口数据

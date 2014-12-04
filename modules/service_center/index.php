@@ -5,18 +5,6 @@
 <head>
 <meta http-equiv=Content-Type content="text/html;charset=utf-8">
 <title>Service Center</title>
-<!-- <link rel="stylesheet" type="text/css" href="statics/css/bootstrap.min.css"> -->
-<!-- <link rel="stylesheet" type="text/css" href="statics/css/bootstrap-modal.css"> -->
-<!-- <link rel="stylesheet" type="text/css" href="statics/css/common.css"> -->
-
-<!-- <script type="text/javascript" src="statics/js/jquery-1.7.2.min.js"></script> -->
-<!-- <script type="text/javascript" src="statics/js/bootstrap.min.js"></script> -->
-<!-- <script type="text/javascript" src="statics/js/bootbox.js"></script> -->
-<!-- <script type="text/javascript" src="statics/js/form.validate.js"></script> -->
-<!-- <script type="text/javascript" src="statics/js/bootstrap-modal.js"></script> -->
-<!-- <script type="text/javascript" src="statics/js/bootstrap-modalmana.js"></script> -->
-<!-- <script type="text/javascript" src="statics/js/modal.manager.plugi.js"></script> -->
-<!-- <script type="text/javascript" src="statics/js/jshow.utils.js"></script> -->
 <link rel="stylesheet" type="text/css" href="http://sandbox.runjs.cn/uploads/rs/316/df6enwiz/bootstrap-modal.css">
 <link id="bootstrap_221" rel="stylesheet" type="text/css" class="library" href="http://sandbox.runjs.cn/js/sandbox/bootstrap-2.2.1/css/bootstrap.min.css">
 
