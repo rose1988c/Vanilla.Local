@@ -1,8 +1,6 @@
 <?php
-header("Content-type: text/html; charset=utf-8");
-chdir('../'); 
-include ( getcwd() . '/lib/database.php' );
-
+header("Content-type: text/html; charset=utf-8"); 
+include 'database.php';
 function table2model($table_name, $fields) {
     $schema = array();
     
@@ -395,7 +393,7 @@ function print_class($table_name, $object_name, $model, $prefix, $funcattr)
     echo str_pad('', 4, ' ') . '    return self::$db_' . $fuctable_name . '->select' . "\n";
     echo str_pad('', 4, ' ') . '        ->where($catdata[\'key\'])' . "\n";
     echo str_pad('', 4, ' ') . '        ->param($catdata[\'query\'])' . "\n";
-    echo str_pad('', 4, ' ') . '        ->order(\'\' . $catdata[\'order\'] . \'\')' . "\n";
+    echo str_pad('', 4, ' ') . '        ->order(\'"\' . $catdata[\'order\'] . \'"\')' . "\n";
     echo str_pad('', 4, ' ') . '        ->get_one();' . "\n";
     echo str_pad('', 4, ' ') . '}' . "\n\n";
     //fetch
@@ -414,7 +412,7 @@ function print_class($table_name, $object_name, $model, $prefix, $funcattr)
     echo str_pad('', 4, ' ') . '    return self::$db_' . $fuctable_name . '->select' . "\n";
     echo str_pad('', 4, ' ') . '        ->where($catdata[\'key\'])' . "\n";
     echo str_pad('', 4, ' ') . '        ->param($catdata[\'query\'])' . "\n";
-    echo str_pad('', 4, ' ') . '        ->order(\'\' . $catdata[\'order\'] . \'\')' . "\n";
+    echo str_pad('', 4, ' ') . '        ->order(\'"\' . $catdata[\'order\'] . \'"\')' . "\n";
     echo str_pad('', 4, ' ') . '        ->limit(($page - 1) * $per_page, ($page - 1) * $per_page + $per_page)' . "\n";
     echo str_pad('', 4, ' ') . '        ->exec();' . "\n";
     
@@ -665,7 +663,6 @@ function print_class($table_name, $object_name, $model, $prefix, $funcattr)
     echo str_pad('', 4, ' ') . '        \'gt\' => \' > \',' . "\n";
     echo str_pad('', 4, ' ') . '        \'lte\' => \' <= \',' . "\n";
     echo str_pad('', 4, ' ') . '        \'lt\' => \' < \',' . "\n";
-    echo str_pad('', 4, ' ') . '        \'ne\' => \' != \',' . "\n";
     echo str_pad('', 4, ' ') . '    );' . "\n";
     echo str_pad('', 4, ' ') . '}' . "\n";
 
@@ -685,7 +682,7 @@ function print_class($table_name, $object_name, $model, $prefix, $funcattr)
     echo str_pad('', 4, ' ') . '    }' . "\n";
     echo str_pad('', 4, ' ') . '    $key = array();' . "\n";
     echo str_pad('', 4, ' ') . '    foreach ((array)$query as $field => $value) {' . "\n";
-    echo str_pad('', 4, ' ') . '        if (empty($value) && $value != 0) {' . "\n";
+    echo str_pad('', 4, ' ') . '        if (empty($value)) {' . "\n";
     echo str_pad('', 4, ' ') . '            unset($query[$field]);' . "\n";
     echo str_pad('', 4, ' ') . '        }' . "\n";
     echo str_pad('', 4, ' ') . '    ' . "\n";

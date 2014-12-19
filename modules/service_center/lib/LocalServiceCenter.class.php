@@ -33,8 +33,8 @@ class LocalServiceCenter
         'appid' => 1,
         'secret_key' => '25f9e794323b453885f5181f1b624d0b',
         'version' => 'C.1.0',
-        'hps' => 'http://interface.qpdiy.com:8090'
-        //'hps'   => 'http://8.interface.qpdiy.com:80'
+        //'hps' => 'http://interface.qpdiy.com:8090'
+        'hps'   => 'http://8.interface.qpdiy.com:80'
     );
     
     /**
