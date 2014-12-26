@@ -1,6 +1,8 @@
 <?php
 header("Content-type: text/html; charset=utf-8");
 set_time_limit(0);
+echo date("H:i:s");
+echo "<br />";
 
 function readBigFile($filename, $count = 20, $tag = "\r\n")
 {
@@ -50,11 +52,13 @@ function readBigFile($filename, $count = 20, $tag = "\r\n")
     $insertStr = rtrim($insertStr, ',');
     
     $exc = $dbh->query($insertStr);
+
+    echo date("H:i:s");
     // 返回结果
     return $content;
 }
 $filename = "12306.txt"; // 需要读取的文件
 $tag = "\n"; // 行分隔符 注意这里必须用双引号
-$count = 130000; // 读取行数
+$count = 132000; // 读取行数
 $data = readBigFile($filename, $count, $tag);
 
